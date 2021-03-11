@@ -16,7 +16,7 @@
 #
 ## Решение:
 s = IO.read('data/1.txt')
-a = 0
+a = 1
 for i in 0...s.length
   if s[i] == '('
     a += 1
