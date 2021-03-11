@@ -16,4 +16,10 @@
 #
 ## Решение:
 
-
+s = IO.read('data/4.txt')
+s1 = s.split("\n").map { |c| c.split("x").map { |c1| c1.to_i }.sort }
+sum = 0
+for i in s1
+  sum += 2 * i[2] * i[0] + 2 * i[0] * i[1] + 2 * i[1] * i[2] + i[0] * i[1]
+end
+puts sum

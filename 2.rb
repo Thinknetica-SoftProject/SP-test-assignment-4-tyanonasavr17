@@ -15,4 +15,19 @@
 #
 #
 ## Решение:
+require 'digest'
+
+bl = true
+a = gets.chomp
+b = 0
+while bl
+  b += 1
+  c = a + b.to_s
+  c = Digest::MD5.hexdigest c
+  if c[0...5] == '00000'
+    bl = false
+  end
+end
+puts b
+
 

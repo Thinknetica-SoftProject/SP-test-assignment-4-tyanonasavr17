@@ -9,5 +9,13 @@
 # - Результат должен быть выведен в консоль командой puts
 #
 ## Решение:
+s = IO.read('data/3.txt')
+s1 = s.split("\n")
+sum = 0
+for i in s1
+  t = i.split(" ").map { |c| c.to_i}
+  sum += t.max - t.min
+end
+puts sum
 
 
